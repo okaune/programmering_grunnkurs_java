@@ -1,22 +1,23 @@
-import static javax.swing.JOptionPane.*;
+import static javax.swing.JOptionPane.*; // Importerer swing biblioteket
 
 class Areal {
 	public static void main(String[] args) {
-		// Bruker input
+		// Bruker input for lengde og bredde (mottas som en String)
 		String inputLengde = showInputDialog("Lengde (cm):");
 		String inputBredde = showInputDialog("Bredde (cm):");
-		
-		// Omregning fra string til double
+
+		// Konvertering fra string til double
 		double lende = Double.parseDouble(inputLengde);
 		double bredde = Double.parseDouble(inputBredde);
-		
+
 		if (lende > 0 && bredde > 0) {
 			// Utregning av areal
 			double areal = lende * bredde;
 			// Print resultat
 			showMessageDialog(null, "Arealet er " + areal + " cm2");
 		} else {
-			showMessageDialog(null, "Tall 0 eller mindre");
+			// Gir ikke mening å ha negative lengder, så skriver ut feilmelding.
+			showMessageDialog(null, "Enten lengden eller bredden er 0 eller mindre.");
 		}
 	}
 }

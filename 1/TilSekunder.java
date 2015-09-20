@@ -11,9 +11,9 @@ class TilSekunder {
 		double min = Double.parseDouble(inputMin);
 		double sek = Double.parseDouble(inputSek);
 		// Omregning
-		min = min + time * 60;
-		sek = sek + min * 60;
-		
+		min = min + (time * 60);
+		sek = sek + (min * 60);
+		// Skriver ut antall sekunder
 		showMessageDialog(null, sek + " sekunder");
 	}
 }
