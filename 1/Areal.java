@@ -1,4 +1,4 @@
-import static javax.swing.JOptionPane.*; // Importerer swing biblioteket
+import static javax.swing.JOptionPane.*; // Importerer JOptionPane biblioteket
 
 class Areal {
 	public static void main(String[] args) {
