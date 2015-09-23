@@ -1,3 +1,4 @@
+import static javax.swing.JOptionPane.*;
 import java.util.*;
 
 class Main {
@@ -5,8 +6,8 @@ class Main {
 		Random random = new Random();
 		int[] antall = new int[10];
 		int tall;
-		
-		for(int i = 0; i < 1000; i++) {
+		int ganger = Integer.parseInt(showInputDialog("Hvor mange ganger vil du kjøre?"));
+		for(int i = 0; i < ganger; i++) {
 			tall = random.nextInt(10);
 			antall[tall] += 1;
 		}

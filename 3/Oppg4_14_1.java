@@ -38,7 +38,8 @@ class Oppg4_14_1 {
 				result += "\n"; // Empty line between tables
 			}
 			// Skriv ut resultat
-			showMessageDialog(null, result);
+			System.out.println(result);
+			//showMessageDialog(null, result);
 		}
 		
 	}
