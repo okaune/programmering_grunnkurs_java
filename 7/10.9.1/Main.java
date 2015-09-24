@@ -1,3 +1,10 @@
+/**
+*
+* Smiley
+*
+*/
+
+
 import java.awt.Graphics;
 import java.awt.Color;
 import javax.swing.JFrame;
