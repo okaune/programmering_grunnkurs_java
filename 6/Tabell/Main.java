@@ -3,6 +3,7 @@ import java.util.*;
 
 class Main {
 	public static void main(String[] args) {
+		// Opretter et randomobjekt
 		Random random = new Random();
 		int[] antall = new int[10];
 		int tall;
@@ -11,6 +12,7 @@ class Main {
 			tall = random.nextInt(10);
 			antall[tall] += 1;
 		}
+		
 		
 		for (int j = 0; j < antall.length; j++) {
 			String stjerner = "";

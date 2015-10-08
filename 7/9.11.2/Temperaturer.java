@@ -16,50 +16,56 @@ class Temperaturer {
 		temperatur[dag][time] = temp;
 	}
 	
-	public int getTempTime(int time) {
-		int middelTemp = 0;
+	public int[] getTempDag() {
+		int[] middelTemp = new int[dager];
 		for (int i = 0; i < dager; i++) {
-			middelTemp += temperatur[i][time - 1];
+			for (int j = 0; j < 24; j++) {
+				middelTemp[i] += temperatur[i][j];
+			}
+			middelTemp[i] /= 24;
 		}
-		middelTemp /= dager;
 		return middelTemp;
 	}
 	
-	public int getTempDag(int dag) {
-		int middelTemp = 0;
+	public int[] getTempTime() {
+		int[] middelTemp = new int[24];
 		for (int i = 0; i < 24; i++) {
-			middelTemp += temperatur[dag - 1][i];
+			for (int j = 0; j < dager; j++) {
+				middelTemp[i] += temperatur[j][i];
+			}
+			middelTemp[i] /= dager;
 		}
-		middelTemp /= 24;
 		return middelTemp;
 	}
 	
 	public int getTempManed() {
-		int middelTemp = 0;
-		for (int i = 1; i < dager + 1; i++) {
-			middelTemp += getTempDag(i);
+		int[] middelTemp = getTempDag();
+		int manedTemp = 0;
+		for (int i = 0; i < middelTemp.length; i++) {
+			manedTemp += middelTemp[i];
 		}
-		middelTemp /= dager;
-		return middelTemp;
+		manedTemp /= middelTemp.length;
+		return manedTemp;
 	}
 	
-	public int tempKategori(int kategoriNum) {
+	public int[] tempKategori() {
+		int[] middelTemp = getTempDag();
 		int[] kategori = new int[5];
 		
-		for (int i = 1; i < dager + 1; i++) {
-			if (getTempDag(i) < -5) {
+		for (int i = 0; i < middelTemp.length; i++) {
+			if (middelTemp[i] < -5) {
 				kategori[0]++;
-			} else if (getTempDag(i) < 0) {
+			} else if (middelTemp[i] < 0) {
 				kategori[1]++;
-			} else if (getTempDag(i) < 5) {
+			} else if (middelTemp[i] < 5) {
 				kategori[2]++;
-			} else if (getTempDag(i) < 10) {
+			} else if (middelTemp[i] < 10) {
 				kategori[3]++;
 			} else {
 				kategori[4]++;
 			}
 		}
 		
-		return kategori[kategoriNum];
+		return kategori;
 	}
 }

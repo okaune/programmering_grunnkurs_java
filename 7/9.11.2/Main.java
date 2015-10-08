@@ -15,17 +15,27 @@ class Main {
 			}
 		}
 		
-		// Henter gjennomsnittstemperatur for valgt time alle dager i måneden (parameter er time, 3 er kl. 3 - 24 er midnatt)
-		System.out.println(String.format("Gjennomsnittstemperaturen for kl. 3 denne måneden er %d grader.", januar.getTempTime(3)));
+		// Henter referanser til tabeller
+		int[] januarDag = januar.getTempDag();
+		int[] januarTime = januar.getTempTime();
+		int[] januarKategori = januar.tempKategori();
 		
 		// Henter gjennomsnittstemperatur for valgt dag (parameter er dato, 1 er første dag)
-		System.out.println(String.format("Gjennomsnittstemperaturen for 1. januar er %d grader.", januar.getTempDag(1)));
+		for (int i = 0; i < januarDag.length; i++) {
+			System.out.println(String.format("Gjennomsnittstemperaturen for %d. januar er %d grader.", i + 1, januarDag[i]));
+		}
+		
+		// Henter gjennomsnittstemperatur for alle timer i måneden
+		for (int i = 0; i < januarTime.length; i++) {
+			System.out.println(String.format("Gjennomsnittstemperaturen for kl. %d denne måneden er %d grader.", i + 1, januarTime[i]));
+		}
 		
 		// Henter gjennomsnittstemperatur for måneden
 		System.out.println(String.format("Gennomsnittstemperaturen for januar er %d grader.", januar.getTempManed()));
 		
 		// Skriver ut hvor mange døgn som ligger i ulike kategorier (0 - 4)
-		System.out.println(String.format("Antall dager gjennomsnittstemperaturen lå mellom 5 og 10 grader i januar er %d dager.", januar.tempKategori(3)));
-		
+		for (int i = 0; i < januarKategori.length; i++) {
+			System.out.println(String.format("Antall dager gjennomsnittstemperaturen lå i kategori %d i januar er %d dager.", i + 1, januarKategori[i]));
+		}
 	}
 }
