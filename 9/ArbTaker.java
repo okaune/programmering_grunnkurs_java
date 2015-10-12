@@ -43,15 +43,15 @@ class ArbTaker {
 		this.skatteprosent = skatteprosent;
 	}
 	
-	public int skattetrekk() {
-		return (månedslønn * (skatteprosent / 100));
+	public double skattetrekk() {
+		return månedslønn * skatteprosent / 100;
 	}
 	
 	public int bruttolønnÅr() {
 		return månedslønn * 12;
 	}
 	
-	public int skattetrekkÅr() {
+	public double skattetrekkÅr() {
 		return skattetrekk() * 10.5;
 	}
 	
