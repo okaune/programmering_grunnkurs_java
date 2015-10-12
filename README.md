@@ -12,3 +12,4 @@ Faget er en introduksjon til programmering og språket java, og har til hensikt 
 * [Øving 7](7) (__Kap 10:__ Enkel grafikkprogrammering og applets)
 * [Øving 8](8) (__Kap 8:__ Noen klasser fra Java API-et)
 * [Øving 9](9) (__Kap 11:__ Samarbeid mellom objekter)
+* [Øving 10](10) (__Kap12:__ Tabeller av objekter)
