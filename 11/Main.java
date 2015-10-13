@@ -5,13 +5,17 @@ class Main {
 	public static void main(String[] args) throws IOException {
 		Konto konto = new Konto(3000, "saldo.txt");
 		Object[] options = {"Innskudd", "Uttak"};
-		String input;
+		String input,
+		transaksjoner = "";
 		int val;
 		
 		do {
+			if (!konto.getTransaksjoner(1).equals("\n")) {
+				transaksjoner = "\n\nSiste transaksjoner:\n" + konto.getTransaksjoner(5);
+			}
 			
 			val = showOptionDialog(null,
-	                               "Kontobalanse: " + konto.getSaldo(),
+	                               "Kontobalanse: " + konto.getSaldo() + transaksjoner,
 	                               "Transaksjon",
 	                               YES_NO_OPTION,
 	                               INFORMATION_MESSAGE,

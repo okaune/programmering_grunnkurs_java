@@ -35,6 +35,18 @@ class Konto {
 		return saldo;
 	}
 	
+	public String getTransaksjoner(int antall) throws IOException {
+		String output = "";
+		String fileLines[] = readFile().split("\n");
+		if (antall > fileLines.length) {
+			antall = fileLines.length;
+		}
+		for(int i = fileLines.length - 1; i > fileLines.length - (1 + antall); i--) {
+			output += fileLines[i] + "\n";
+		}
+		return output;
+	}
+	
 	public String readFile() throws IOException {
 		BufferedReader file = new BufferedReader(new FileReader(filename));
 		
