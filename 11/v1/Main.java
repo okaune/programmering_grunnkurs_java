@@ -35,6 +35,7 @@ class Main {
 						konto.writeFile(input, true);
 					} else {
 						showMessageDialog(null, "Kan ikke overtrekke konto!");
+						//konto.writeFile("", false);
 					}
 					break;
 				default:
