@@ -14,6 +14,6 @@ Faget er en introduksjon til programmering og språket java, og har til hensikt 
 * [Øving 9](09) (__Kap 11:__ Samarbeid mellom objekter)
 * [Øving 10](10) (__Kap 12:__ Tabeller av objekter)
 * [Øving 11](11) (__Kap 16:__ Datafiler og strømmer. Enhetstesting.)
-* Øving 12 *(__OpenGL__, introduksjon)*
-* Øving 13 *(__OpenGL__, transformasjoner)*
-* Øving 14 *(__OpenGL__, lys og materialegenskaper)*
+* [Øving 12]("Kommer senere") *(__OpenGL__, introduksjon)*
+* [Øving 13]("Kommer senere") *(__OpenGL__, transformasjoner)*
+* [Øving 14]("Kommer senere") *(__OpenGL__, lys og materialegenskaper)*
