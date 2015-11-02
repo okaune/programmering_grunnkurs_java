@@ -1,6 +1,7 @@
 # Programmering Grunnkurs (Java)
 Dette er en samling med øvinger gjennomført i faget "Programmering Grunnkurs" ved HiST.
 Faget er en introduksjon til programmering og språket java, og har til hensikt å gi grunnlegende programmeringsferdigheter, samt kunnskap om objekt-orientert programmering.
+
 __NB!__ Øving 12 - 14 krever [jogl versjon 2.1](http://jogamp.org/deployment/jogamp-current/archive/) for å fungere.
 
 ## Øvinger:
